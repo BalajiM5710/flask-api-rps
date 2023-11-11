@@ -1,19 +1,4 @@
 runtime: python310
 
 
-entrypoint: gunicorn -b :$PORT api:app
-
-
-env_variables:
-  # Add any environment variables your Flask app requires
-  VARIABLE_NAME: 'value'
-
-automatic_scaling:
-  target_cpu_utilization: 0.65  # Adjust based on your application's needs
-  min_instances: 1
-  max_instances: 10  # Adjust based on your application's needs
-
-handlers:
-- url: /.*
-  script: auto
 
